@@ -1,0 +1,73 @@
+---
+title: "MWestHW1"
+author: "Melissa West"
+format: html
+editor: visual
+jupyter: python3
+---
+
+# Create a numeric vector
+
+numeric_vector \<- c(5, 10, 15, 20, 25)
+
+# Calculate the mean and assign it to 'mean_value'
+
+mean_value \<- mean(numeric_vector)
+
+# Print the mean value
+
+print(mean_value)
+
+# Create a data frame
+
+friends_df \<- data.frame( Name = c("Cristal", "Veronica", "Delissa", "Hk", "Cassie"), \# Character column for names Age = c(36, 35, 35, 38, 30), \# Numeric column for ages Favorite_Color = c("Green", "Orange", "Pink", "Blue", "Brown") \# Character column for favorite colors )
+
+# Print the entire data frame to check if it is correct
+
+print(friends_df)
+
+# Create the vectors
+
+vector1 \<- 1:20 \# Sequence of numbers from 1 to 20 vector2 \<- seq(1, 40, by = 2) \# Sequence from 1 to 40, stepping by 2
+
+# Perform operations between vector1 and vector2
+
+# Element-wise addition
+
+sum_vector \<- vector1 + vector2
+
+# Element-wise subtraction
+
+diff_vector \<- vector1 - vector2
+
+# Element-wise multiplication
+
+prod_vector \<- vector1 \* vector2
+
+# Element-wise division
+
+quot_vector \<- vector1 / vector2
+
+# Print the result vectors
+
+print(sum_vector) \# Print the sum of the two vectors print(diff_vector) \# Print the difference of the two vectors print(prod_vector) \# Print the product of the two vectors print(quot_vector) \# Print the quotient of the two vectors
+
+# Define the temperature conversion function
+
+convert_temperature \<- function(temp, unit) { \# Check if the unit is "C" for Celsius if (unit == "C") { \# Convert Fahrenheit to Celsius return((temp - 32) \* 5/9)
+
+\# Check if the unit is "F" for Fahrenheit } else if (unit == "F") { \# Convert Celsius to Fahrenheit return((temp \* 9/5) + 32)
+
+\# Handle invalid input } else { return("Error: Invalid unit. Please specify 'C' or 'F'.") } }
+
+# Test with converting 100°F to Celsius
+
+print(convert_temperature(100, "C"))
+
+# Test with converting 37°C to Fahrenheit
+
+print(convert_temperature(37, "F"))
+
+# Test with invalid unit input
+
+print(convert_temperature(100, "X"))
